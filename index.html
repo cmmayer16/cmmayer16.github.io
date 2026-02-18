@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>cmayer16 • Personal Site</title>
-  <meta name="description" content="Personal website for cmayer16 — projects, skills, and contact." />
+  <title>ROC Real Estate Corp • Rochester Rentals</title>
+  <meta name="description" content="ROC Real Estate Corp — building a Rochester rental portfolio starting with duplexes and student rentals." />
+
   <style>
     :root{
       --bg:#070A12;
@@ -14,8 +15,7 @@
       --text:#EAF0FF;
       --muted:#A9B4D6;
       --accent:#7AB7FF;
-      --accent2:#B69CFF;
-      --good:#79F2C0;
+      --accent2:#79F2C0;
       --shadow: 0 18px 60px rgba(0,0,0,.45);
       --radius: 18px;
     }
@@ -26,22 +26,23 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       background:
-        radial-gradient(900px 600px at 15% 0%, rgba(122,183,255,.22), transparent 60%),
-        radial-gradient(800px 520px at 85% 10%, rgba(182,156,255,.16), transparent 55%),
-        radial-gradient(900px 700px at 50% 100%, rgba(121,242,192,.10), transparent 55%),
+        radial-gradient(900px 600px at 12% 0%, rgba(122,183,255,.20), transparent 60%),
+        radial-gradient(800px 540px at 85% 10%, rgba(121,242,192,.14), transparent 55%),
+        radial-gradient(900px 700px at 50% 100%, rgba(169,180,214,.08), transparent 55%),
         var(--bg);
       line-height:1.6;
     }
     a{color:inherit}
-    .wrap{width:min(1100px, 92vw); margin:0 auto; padding:22px 0 64px;}
+    .wrap{width:min(1120px, 92vw); margin:0 auto; padding:22px 0 68px;}
+
     .topbar{
       position:sticky; top:0; z-index:10;
       backdrop-filter: blur(10px);
-      background: linear-gradient(180deg, rgba(7,10,18,.72), rgba(7,10,18,.35));
+      background: linear-gradient(180deg, rgba(7,10,18,.78), rgba(7,10,18,.35));
       border-bottom:1px solid rgba(255,255,255,.06);
     }
     .topbar-inner{
-      width:min(1100px, 92vw);
+      width:min(1120px, 92vw);
       margin:0 auto;
       padding:14px 0;
       display:flex;
@@ -51,12 +52,12 @@
     }
     .brand{
       display:flex; align-items:center; gap:10px; text-decoration:none;
-      font-weight:700; letter-spacing:.2px;
+      font-weight:800; letter-spacing:.2px;
     }
-    .dot{
-      width:12px; height:12px; border-radius:999px;
-      background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent2));
-      box-shadow: 0 0 28px rgba(122,183,255,.35);
+    .mark{
+      width:14px; height:14px; border-radius:6px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 28px rgba(122,183,255,.25);
     }
     nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
     nav a{
@@ -74,21 +75,22 @@
       border-color: rgba(255,255,255,.08);
     }
 
-    .hero{
-      padding:54px 0 18px;
-      display:grid;
-      grid-template-columns: 1.4fr .9fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 860px){
-      .hero{grid-template-columns:1fr; padding-top:34px;}
-    }
     .card{
       background: linear-gradient(180deg, var(--panel), var(--panel2));
       border:1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
+    }
+
+    .hero{
+      padding:54px 0 18px;
+      display:grid;
+      grid-template-columns: 1.45fr .85fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr; padding-top:34px;}
     }
     .hero-main{padding:22px 22px 18px;}
     .kicker{
@@ -100,11 +102,11 @@
       background: rgba(255,255,255,.04);
     }
     .kicker b{color:var(--text)}
-    .h1{
+    h1{
       margin:14px 0 10px;
-      font-size: clamp(30px, 4.2vw, 52px);
-      line-height:1.1;
-      letter-spacing:-.6px;
+      font-size: clamp(30px, 4.4vw, 54px);
+      line-height:1.08;
+      letter-spacing:-.7px;
     }
     .grad{
       background: linear-gradient(90deg, var(--accent), var(--accent2));
@@ -112,7 +114,8 @@
       background-clip:text;
       color:transparent;
     }
-    .lead{margin:0; color:var(--muted); font-size:16px; max-width:60ch}
+    .lead{margin:0; color:var(--muted); font-size:16px; max-width:70ch}
+
     .cta{
       display:flex; gap:10px; flex-wrap:wrap;
       margin-top:16px;
@@ -125,46 +128,33 @@
       background: rgba(255,255,255,.06);
       text-decoration:none;
       color:var(--text);
-      font-weight:600;
+      font-weight:700;
       transition:.15s ease;
       cursor:pointer;
       user-select:none;
     }
     .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.22);}
     .btn.primary{
-      background: linear-gradient(90deg, rgba(122,183,255,.24), rgba(182,156,255,.18));
+      background: linear-gradient(90deg, rgba(122,183,255,.22), rgba(121,242,192,.16));
       border-color: rgba(122,183,255,.30);
       box-shadow: 0 12px 30px rgba(122,183,255,.10);
     }
-    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
-    .pill{
-      font-size:12px;
-      color:var(--muted);
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-    }
 
     .hero-side{padding:18px;}
-    .mini{
-      display:grid;
-      gap:10px;
-      height:100%;
-    }
+    .mini{display:grid; gap:10px; height:100%;}
     .stat{
-      padding:14px 14px;
+      padding:14px;
       border-radius: 14px;
       border:1px solid rgba(255,255,255,.10);
       background: rgba(0,0,0,.12);
     }
     .stat .label{color:var(--muted); font-size:12px;}
-    .stat .value{font-size:18px; font-weight:800; margin-top:4px;}
+    .stat .value{font-size:18px; font-weight:900; margin-top:4px;}
     .spark{
       height:8px;
       border-radius:999px;
       margin-top:10px;
-      background: linear-gradient(90deg, rgba(121,242,192,.65), rgba(122,183,255,.55), rgba(182,156,255,.55));
+      background: linear-gradient(90deg, rgba(122,183,255,.55), rgba(121,242,192,.55));
       opacity:.85;
     }
 
@@ -173,38 +163,27 @@
       display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
       margin: 10px 0 10px;
     }
-    .section-head h2{
-      margin:0;
-      font-size:18px;
-      letter-spacing:.2px;
-    }
-    .section-head p{
-      margin:0; color:var(--muted); font-size:14px;
-    }
+    .section-head h2{margin:0; font-size:18px; letter-spacing:.2px;}
+    .section-head p{margin:0; color:var(--muted); font-size:14px;}
 
     .grid3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap:12px;
     }
-    @media (max-width: 900px){ .grid3{grid-template-columns:1fr;} }
+    @media (max-width: 980px){ .grid3{grid-template-columns:1fr;} }
 
-    .proj{
-      padding:16px;
-      position:relative;
-      overflow:hidden;
+    .boxpad{padding:16px;}
+    .muted{color:var(--muted);}
+    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;}
+    .pill{
+      font-size:12px;
+      color:var(--muted);
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
     }
-    .proj:before{
-      content:"";
-      position:absolute; inset:-40px -60px auto auto;
-      width:180px; height:180px;
-      background: radial-gradient(circle at 30% 30%, rgba(122,183,255,.20), transparent 60%);
-      transform: rotate(18deg);
-      pointer-events:none;
-    }
-    .proj h3{margin:6px 0 6px; font-size:16px;}
-    .proj p{margin:0; color:var(--muted); font-size:14px;}
-    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;}
     .tag{
       font-size:12px;
       padding:6px 9px;
@@ -212,46 +191,40 @@
       background: rgba(255,255,255,.05);
       border:1px solid rgba(255,255,255,.10);
       color:var(--muted);
+      display:inline-block;
+      margin-right:6px;
+      margin-top:8px;
     }
-    .tag.good{color:#0e1a14; background: rgba(121,242,192,.85); border-color: rgba(121,242,192,.55); font-weight:700;}
+    .tag.good{
+      color:#06140f;
+      background: rgba(121,242,192,.86);
+      border-color: rgba(121,242,192,.55);
+      font-weight:800;
+    }
 
-    .about{
-      padding:18px;
+    .split{
       display:grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.15fr .85fr;
       gap:12px;
     }
-    @media (max-width: 900px){ .about{grid-template-columns:1fr;} }
+    @media (max-width: 980px){ .split{grid-template-columns:1fr;} }
 
-    .about .box{
-      padding:14px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.10);
-    }
-    .about h3{margin:0 0 8px; font-size:15px;}
-    .about ul{margin:0; padding-left:18px; color:var(--muted);}
-    .about li{margin:6px 0}
+    .list{margin:10px 0 0; padding-left:18px; color:var(--muted);}
+    .list li{margin:6px 0}
 
     .contact{
-      padding:18px;
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap:12px;
     }
-    @media (max-width: 900px){ .contact{grid-template-columns:1fr;} }
-    .contact .box{
-      padding:14px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.10);
-    }
+    @media (max-width: 980px){ .contact{grid-template-columns:1fr;} }
     .contact a{
       color:var(--accent);
       text-decoration:none;
       border-bottom:1px solid rgba(122,183,255,.25);
     }
     .contact a:hover{border-bottom-color: rgba(122,183,255,.5);}
+
     .footer{
       margin-top:18px;
       color:var(--muted);
@@ -263,15 +236,6 @@
       opacity:.95;
     }
     .tiny{font-size:12px; color:var(--muted);}
-    .kbd{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size:12px;
-      padding:3px 7px;
-      border-radius:8px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      color:var(--muted);
-    }
   </style>
 </head>
 
@@ -279,12 +243,13 @@
   <div class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="#top">
-        <span class="dot"></span>
-        <span>cmayer16</span>
+        <span class="mark"></span>
+        <span>ROC Real Estate Corp</span>
       </a>
       <nav>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
+        <a href="#strategy">Strategy</a>
+        <a href="#criteria">Criteria</a>
+        <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -293,141 +258,173 @@
   <div id="top" class="wrap">
     <div class="hero">
       <div class="card hero-main">
-        <div class="kicker">👋 <b>Hey</b> — welcome to my corner of the internet</div>
+        <div class="kicker">🏠 <b>Rochester rentals</b> • Duplexes • Student housing • Long-term ownership</div>
 
-        <h1 class="h1">
-          I’m <span class="grad">Cody Mayer</span><br/>
-          and I build things.
+        <h1>
+          I’m building a <span class="grad">rental portfolio</span><br/>
+          in Rochester, NY.
         </h1>
 
         <p class="lead">
-          This is a clean, modern one-page site you can keep upgrading. Swap the project cards, add links,
-          and make it yours in 5 minutes.
+          ROC Real Estate Corp is the home base for future acquisitions. I’m starting with duplexes and student rentals
+          where the numbers work conservatively, the neighborhood makes sense, and the property can be improved without
+          getting reckless.
         </p>
 
         <div class="cta">
-          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn primary" href="mailto:rocrealestatecorp@gmail.com?subject=Deal%20Lead%20for%20ROC%20Real%20Estate">Send a deal</a>
+          <a class="btn" href="#criteria">View criteria</a>
           <a class="btn" href="#contact">Contact</a>
-          <a class="btn" href="https://github.com/cmmayer16" target="_blank" rel="noreferrer">GitHub</a>
         </div>
 
         <div class="pillrow">
-          <span class="pill">Portfolio</span>
-          <span class="pill">Student</span>
-          <span class="pill">Business + Tech</span>
-          <span class="pill">Always learning</span>
+          <span class="pill">Cash flow first</span>
+          <span class="pill">Buy right</span>
+          <span class="pill">Renovate for durability</span>
+          <span class="pill">Operate professionally</span>
         </div>
       </div>
 
       <div class="card hero-side">
         <div class="mini">
           <div class="stat">
-            <div class="label">Current focus</div>
-            <div class="value">Building skills + projects</div>
+            <div class="label">Starting focus</div>
+            <div class="value">Duplexes + student rentals</div>
             <div class="spark"></div>
           </div>
           <div class="stat">
-            <div class="label">What I’m into</div>
-            <div class="value">Fitness • Business • Coding</div>
+            <div class="label">Market</div>
+            <div class="value">Rochester, NY</div>
             <div class="spark"></div>
           </div>
           <div class="stat">
-            <div class="label">Status</div>
-            <div class="value">Open to cool opportunities</div>
+            <div class="label">Goal</div>
+            <div class="value">Stable cash flow + equity</div>
             <div class="spark"></div>
           </div>
-          <div class="tiny">Tip: edit text in <span class="kbd">index.html</span> and hit <span class="kbd">Commit changes</span>.</div>
+          <div class="tiny">
+            If you have a potential deal, email <b>rocrealestatecorp@gmail.com</b>.
+          </div>
         </div>
       </div>
     </div>
 
-    <section id="projects">
+    <section id="strategy">
       <div class="section-head">
-        <h2>Projects</h2>
-        <p>Replace these with your real work.</p>
+        <h2>Strategy</h2>
+        <p>Keep it simple. Repeat what works.</p>
       </div>
 
-      <div class="grid3">
-        <div class="card proj">
-          <div class="kicker">🚀 Featured</div>
-          <h3>Inventory + Shopping List Bot</h3>
-          <p>A simple tool to track items, auto-build a shopping list, and keep things organized.</p>
-          <div class="tags">
-            <span class="tag good">Beginner friendly</span>
-            <span class="tag">Python</span>
-            <span class="tag">Automation</span>
-          </div>
+      <div class="split">
+        <div class="card boxpad">
+          <h3 style="margin:0 0 8px;">How I evaluate deals</h3>
+          <p class="muted" style="margin:0;">
+            I underwrite with conservative assumptions so the deal still works even if repairs run high or rent takes time
+            to stabilize.
+          </p>
+          <ul class="list">
+            <li>Target positive cash flow after expenses + reserves</li>
+            <li>Prefer properties that can improve rent or reduce maintenance</li>
+            <li>Focus on locations with steady demand (jobs, schools, transit)</li>
+          </ul>
         </div>
 
-        <div class="card proj">
-          <div class="kicker">💼 Business</div>
-          <h3>Mini Case Studies</h3>
-          <p>Short writeups breaking down decisions, strategy, and what I’d do differently.</p>
-          <div class="tags">
-            <span class="tag">Strategy</span>
-            <span class="tag">Finance</span>
-            <span class="tag">Analysis</span>
+        <div class="card boxpad">
+          <h3 style="margin:0 0 8px;">Operating standards</h3>
+          <p class="muted" style="margin:0;">
+            The goal is long-term tenant retention and predictable performance.
+          </p>
+          <div>
+            <span class="tag good">Clear screening</span>
+            <span class="tag">Fast maintenance</span>
+            <span class="tag">Clean documentation</span>
+            <span class="tag">Respectful communication</span>
           </div>
-        </div>
-
-        <div class="card proj">
-          <div class="kicker">⚡ Next up</div>
-          <h3>Personal Dashboard</h3>
-          <p>A clean dashboard for workouts, goals, and progress, built as I learn web dev.</p>
-          <div class="tags">
-            <span class="tag">HTML/CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Design</span>
-          </div>
+          <p class="muted" style="margin:12px 0 0;">
+            Student rentals are treated like a system: move-in/move-out checklists, durable finishes, and predictable turns.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <section id="criteria">
       <div class="section-head">
-        <h2>About</h2>
-        <p>Quick snapshot — make it personal.</p>
+        <h2>Criteria</h2>
+        <p>What I’m looking for right now.</p>
       </div>
 
-      <div class="card about">
-        <div class="box">
-          <h3>Bio</h3>
-          <p class="lead" style="margin:0">
-            I’m a student who likes building practical projects and learning by doing.
-            I care about clean design, useful tools, and getting better every week.
+      <div class="grid3">
+        <div class="card boxpad">
+          <h3 style="margin:0 0 8px;">Property types</h3>
+          <p class="muted" style="margin:0;">
+            Starting with small properties that are financeable, manageable, and teach the game fast.
           </p>
-        </div>
-
-        <div class="box">
-          <h3>Skills</h3>
-          <div class="pillrow" style="margin-top:0">
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <span class="pill">Python</span>
-            <span class="pill">Excel</span>
-            <span class="pill">Business analysis</span>
-            <span class="pill">Problem solving</span>
-          </div>
-          <p class="tiny" style="margin:10px 0 0">
-            Swap these “skills” chips with whatever you want to show.
-          </p>
-        </div>
-
-        <div class="box">
-          <h3>Highlights</h3>
-          <ul>
-            <li>Learning web dev and shipping small projects</li>
-            <li>Interested in business, investing, and entrepreneurship</li>
-            <li>Always down to collaborate on something useful</li>
+          <ul class="list">
+            <li>Duplex / Triplex / Fourplex</li>
+            <li>Student rentals near campus corridors</li>
+            <li>Small MF later (5–20 units)</li>
           </ul>
         </div>
 
-        <div class="box">
-          <h3>What you can add next</h3>
-          <ul>
-            <li>A resume button (PDF)</li>
-            <li>Real project links + screenshots</li>
-            <li>A blog page or “Now” page</li>
+        <div class="card boxpad">
+          <h3 style="margin:0 0 8px;">Must-haves</h3>
+          <ul class="list" style="margin-top:0;">
+            <li>Numbers work conservatively</li>
+            <li>Mechanical/safety issues are solvable</li>
+            <li>Clear rehab scope + realistic budget</li>
+            <li>Strong rent demand in the area</li>
+          </ul>
+        </div>
+
+        <div class="card boxpad">
+          <h3 style="margin:0 0 8px;">Nice-to-haves</h3>
+          <ul class="list" style="margin-top:0;">
+            <li>Off-street parking</li>
+            <li>Separate utilities (or clear path to separate)</li>
+            <li>Value-add upgrades that raise rent</li>
+            <li>Simple layouts, durable finishes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="section-head">
+        <h2>Portfolio</h2>
+        <p>Updates will go here as acquisitions happen.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card boxpad">
+          <div class="kicker">📍 Coming soon</div>
+          <h3 style="margin:8px 0 6px;">First duplex</h3>
+          <p class="muted" style="margin:0;">Placeholder for your first purchase: unit count, target rents, and improvements.</p>
+          <div class="pillrow">
+            <span class="pill">Units: 2</span>
+            <span class="pill">Strategy: stabilize</span>
+            <span class="pill">Status: searching</span>
+          </div>
+        </div>
+
+        <div class="card boxpad">
+          <div class="kicker">🛠️ Playbook</div>
+          <h3 style="margin:8px 0 6px;">Renovations that matter</h3>
+          <p class="muted" style="margin:0;">Durable upgrades that reduce maintenance and increase rentability.</p>
+          <ul class="list">
+            <li>Flooring, paint, lighting</li>
+            <li>Kitchen/bath refresh (smart budget)</li>
+            <li>Safety + mechanicals first</li>
+          </ul>
+        </div>
+
+        <div class="card boxpad">
+          <div class="kicker">📈 Student rentals</div>
+          <h3 style="margin:8px 0 6px;">Turnover system</h3>
+          <p class="muted" style="margin:0;">Move-in/out checklists, fast turns, and clear standards to protect the asset.</p>
+          <ul class="list">
+            <li>Documented condition photos</li>
+            <li>Standardized cleaning + repairs</li>
+            <li>Lease calendar planning</li>
           </ul>
         </div>
       </div>
@@ -436,38 +433,41 @@
     <section id="contact">
       <div class="section-head">
         <h2>Contact</h2>
-        <p>Drop your real links here.</p>
+        <p>Deal leads, partnerships, and questions.</p>
       </div>
 
-      <div class="card contact">
-        <div class="box">
-          <h3>Reach me</h3>
-          <p class="lead" style="margin:0">
-            Email is the easiest: <a href="mailto:you@example.com">you@example.com</a><br/>
-            GitHub: <a href="https://github.com/cmmayer16" target="_blank" rel="noreferrer">github.com/cmmayer16</a>
-          </p>
-          <div class="cta" style="margin-top:12px">
-            <a class="btn primary" href="mailto:you@example.com">Email me</a>
-            <a class="btn" href="https://github.com/cmmayer16" target="_blank" rel="noreferrer">View GitHub</a>
+      <div class="card boxpad">
+        <div class="contact">
+          <div style="padding:14px; border-radius:14px; border:1px solid rgba(255,255,255,.10); background: rgba(0,0,0,.10);">
+            <h3 style="margin:0 0 8px;">Email</h3>
+            <p class="muted" style="margin:0;">
+              <a href="mailto:rocrealestatecorp@gmail.com">rocrealestatecorp@gmail.com</a>
+            </p>
+            <div class="cta" style="margin-top:12px">
+              <a class="btn primary" href="mailto:rocrealestatecorp@gmail.com?subject=Deal%20Lead%20for%20ROC%20Real%20Estate">Send a deal</a>
+              <a class="btn" href="#criteria">Criteria</a>
+            </div>
+            <p class="tiny" style="margin:12px 0 0;">
+              Include: address, asking price, rent comps, condition notes, and any photos/links.
+            </p>
           </div>
-        </div>
 
-        <div class="box">
-          <h3>Quick edits</h3>
-          <ul>
-            <li>Change <span class="kbd">Cody Mayer</span> to your preferred name</li>
-            <li>Replace the 3 project cards with real projects</li>
-            <li>Update the email to your real email</li>
-            <li>Add Instagram/LinkedIn links if you want</li>
-          </ul>
-          <p class="tiny">Everything is in one file, so it’s easy to tweak.</p>
+          <div style="padding:14px; border-radius:14px; border:1px solid rgba(255,255,255,.10); background: rgba(0,0,0,.10);">
+            <h3 style="margin:0 0 8px;">Next upgrades</h3>
+            <ul class="list" style="margin-top:0;">
+              <li>Add a logo + brand colors</li>
+              <li>Upload PDFs: criteria sheet, investor one-pager</li>
+              <li>Add a “For Rent” page if you manage units</li>
+              <li>Add property photos + a timeline</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <div class="footer">
-      <div>© <span id="y"></span> cmayer16</div>
-      <div class="tiny">Built on GitHub Pages • No backend • Fast + free</div>
+      <div>© <span id="y"></span> ROC Real Estate Corp</div>
+      <div class="tiny">Built on GitHub Pages • Fast + free</div>
     </div>
   </div>
 
