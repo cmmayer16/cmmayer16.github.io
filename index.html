@@ -40,4 +40,439 @@
       background: linear-gradient(180deg, rgba(7,10,18,.72), rgba(7,10,18,.35));
       border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .topbar-
+    .topbar-inner{
+      width:min(1100px, 92vw);
+      margin:0 auto;
+      padding:14px 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; text-decoration:none;
+      font-weight:700; letter-spacing:.2px;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent2));
+      box-shadow: 0 0 28px rgba(122,183,255,.35);
+    }
+    nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      text-decoration:none;
+      color:var(--muted);
+      border:1px solid transparent;
+      padding:8px 10px;
+      border-radius:999px;
+      transition: .15s ease;
+      font-size:14px;
+    }
+    nav a:hover{
+      color:var(--text);
+      background: rgba(255,255,255,.05);
+      border-color: rgba(255,255,255,.08);
+    }
+
+    .hero{
+      padding:54px 0 18px;
+      display:grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr; padding-top:34px;}
+    }
+    .card{
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-main{padding:22px 22px 18px;}
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:13px; color:var(--muted);
+      padding:7px 10px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:999px;
+      background: rgba(255,255,255,.04);
+    }
+    .kicker b{color:var(--text)}
+    .h1{
+      margin:14px 0 10px;
+      font-size: clamp(30px, 4.2vw, 52px);
+      line-height:1.1;
+      letter-spacing:-.6px;
+    }
+    .grad{
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .lead{margin:0; color:var(--muted); font-size:16px; max-width:60ch}
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:16px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 12px;
+      border-radius: 12px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      text-decoration:none;
+      color:var(--text);
+      font-weight:600;
+      transition:.15s ease;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.22);}
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(122,183,255,.24), rgba(182,156,255,.18));
+      border-color: rgba(122,183,255,.30);
+      box-shadow: 0 12px 30px rgba(122,183,255,.10);
+    }
+    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+    .pill{
+      font-size:12px;
+      color:var(--muted);
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+
+    .hero-side{padding:18px;}
+    .mini{
+      display:grid;
+      gap:10px;
+      height:100%;
+    }
+    .stat{
+      padding:14px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.12);
+    }
+    .stat .label{color:var(--muted); font-size:12px;}
+    .stat .value{font-size:18px; font-weight:800; margin-top:4px;}
+    .spark{
+      height:8px;
+      border-radius:999px;
+      margin-top:10px;
+      background: linear-gradient(90deg, rgba(121,242,192,.65), rgba(122,183,255,.55), rgba(182,156,255,.55));
+      opacity:.85;
+    }
+
+    section{margin-top:18px;}
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin: 10px 0 10px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .section-head p{
+      margin:0; color:var(--muted); font-size:14px;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    @media (max-width: 900px){ .grid3{grid-template-columns:1fr;} }
+
+    .proj{
+      padding:16px;
+      position:relative;
+      overflow:hidden;
+    }
+    .proj:before{
+      content:"";
+      position:absolute; inset:-40px -60px auto auto;
+      width:180px; height:180px;
+      background: radial-gradient(circle at 30% 30%, rgba(122,183,255,.20), transparent 60%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+    .proj h3{margin:6px 0 6px; font-size:16px;}
+    .proj p{margin:0; color:var(--muted); font-size:14px;}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;}
+    .tag{
+      font-size:12px;
+      padding:6px 9px;
+      border-radius:999px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      color:var(--muted);
+    }
+    .tag.good{color:#0e1a14; background: rgba(121,242,192,.85); border-color: rgba(121,242,192,.55); font-weight:700;}
+
+    .about{
+      padding:18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width: 900px){ .about{grid-template-columns:1fr;} }
+
+    .about .box{
+      padding:14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.10);
+    }
+    .about h3{margin:0 0 8px; font-size:15px;}
+    .about ul{margin:0; padding-left:18px; color:var(--muted);}
+    .about li{margin:6px 0}
+
+    .contact{
+      padding:18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width: 900px){ .contact{grid-template-columns:1fr;} }
+    .contact .box{
+      padding:14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.10);
+    }
+    .contact a{
+      color:var(--accent);
+      text-decoration:none;
+      border-bottom:1px solid rgba(122,183,255,.25);
+    }
+    .contact a:hover{border-bottom-color: rgba(122,183,255,.5);}
+    .footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      opacity:.95;
+    }
+    .tiny{font-size:12px; color:var(--muted);}
+    .kbd{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size:12px;
+      padding:3px 7px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">
+        <span class="dot"></span>
+        <span>cmayer16</span>
+      </a>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <div id="top" class="wrap">
+    <div class="hero">
+      <div class="card hero-main">
+        <div class="kicker">👋 <b>Hey</b> — welcome to my corner of the internet</div>
+
+        <h1 class="h1">
+          I’m <span class="grad">Cody Mayer</span><br/>
+          and I build things.
+        </h1>
+
+        <p class="lead">
+          This is a clean, modern one-page site you can keep upgrading. Swap the project cards, add links,
+          and make it yours in 5 minutes.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" href="https://github.com/cmmayer16" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+
+        <div class="pillrow">
+          <span class="pill">Portfolio</span>
+          <span class="pill">Student</span>
+          <span class="pill">Business + Tech</span>
+          <span class="pill">Always learning</span>
+        </div>
+      </div>
+
+      <div class="card hero-side">
+        <div class="mini">
+          <div class="stat">
+            <div class="label">Current focus</div>
+            <div class="value">Building skills + projects</div>
+            <div class="spark"></div>
+          </div>
+          <div class="stat">
+            <div class="label">What I’m into</div>
+            <div class="value">Fitness • Business • Coding</div>
+            <div class="spark"></div>
+          </div>
+          <div class="stat">
+            <div class="label">Status</div>
+            <div class="value">Open to cool opportunities</div>
+            <div class="spark"></div>
+          </div>
+          <div class="tiny">Tip: edit text in <span class="kbd">index.html</span> and hit <span class="kbd">Commit changes</span>.</div>
+        </div>
+      </div>
+    </div>
+
+    <section id="projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Replace these with your real work.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card proj">
+          <div class="kicker">🚀 Featured</div>
+          <h3>Inventory + Shopping List Bot</h3>
+          <p>A simple tool to track items, auto-build a shopping list, and keep things organized.</p>
+          <div class="tags">
+            <span class="tag good">Beginner friendly</span>
+            <span class="tag">Python</span>
+            <span class="tag">Automation</span>
+          </div>
+        </div>
+
+        <div class="card proj">
+          <div class="kicker">💼 Business</div>
+          <h3>Mini Case Studies</h3>
+          <p>Short writeups breaking down decisions, strategy, and what I’d do differently.</p>
+          <div class="tags">
+            <span class="tag">Strategy</span>
+            <span class="tag">Finance</span>
+            <span class="tag">Analysis</span>
+          </div>
+        </div>
+
+        <div class="card proj">
+          <div class="kicker">⚡ Next up</div>
+          <h3>Personal Dashboard</h3>
+          <p>A clean dashboard for workouts, goals, and progress, built as I learn web dev.</p>
+          <div class="tags">
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>Quick snapshot — make it personal.</p>
+      </div>
+
+      <div class="card about">
+        <div class="box">
+          <h3>Bio</h3>
+          <p class="lead" style="margin:0">
+            I’m a student who likes building practical projects and learning by doing.
+            I care about clean design, useful tools, and getting better every week.
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>Skills</h3>
+          <div class="pillrow" style="margin-top:0">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">Python</span>
+            <span class="pill">Excel</span>
+            <span class="pill">Business analysis</span>
+            <span class="pill">Problem solving</span>
+          </div>
+          <p class="tiny" style="margin:10px 0 0">
+            Swap these “skills” chips with whatever you want to show.
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>Highlights</h3>
+          <ul>
+            <li>Learning web dev and shipping small projects</li>
+            <li>Interested in business, investing, and entrepreneurship</li>
+            <li>Always down to collaborate on something useful</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>What you can add next</h3>
+          <ul>
+            <li>A resume button (PDF)</li>
+            <li>Real project links + screenshots</li>
+            <li>A blog page or “Now” page</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Drop your real links here.</p>
+      </div>
+
+      <div class="card contact">
+        <div class="box">
+          <h3>Reach me</h3>
+          <p class="lead" style="margin:0">
+            Email is the easiest: <a href="mailto:you@example.com">you@example.com</a><br/>
+            GitHub: <a href="https://github.com/cmmayer16" target="_blank" rel="noreferrer">github.com/cmmayer16</a>
+          </p>
+          <div class="cta" style="margin-top:12px">
+            <a class="btn primary" href="mailto:you@example.com">Email me</a>
+            <a class="btn" href="https://github.com/cmmayer16" target="_blank" rel="noreferrer">View GitHub</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>Quick edits</h3>
+          <ul>
+            <li>Change <span class="kbd">Cody Mayer</span> to your preferred name</li>
+            <li>Replace the 3 project cards with real projects</li>
+            <li>Update the email to your real email</li>
+            <li>Add Instagram/LinkedIn links if you want</li>
+          </ul>
+          <p class="tiny">Everything is in one file, so it’s easy to tweak.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="y"></span> cmayer16</div>
+      <div class="tiny">Built on GitHub Pages • No backend • Fast + free</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
